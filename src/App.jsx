@@ -29,6 +29,7 @@ function App() {
   return (
     <div className="App">
       <h1>Rick And Morty</h1>
+      <button onClick={() => setPageNumber((prev) => prev - 1)}>Back</button>
       <button onClick={() => setPageNumber((prev) => prev + 1)}>Next Page</button>
       <button onClick={() => setPageNumber(1)}>Reset</button>
       <div>
