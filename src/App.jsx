@@ -15,6 +15,8 @@ import './App.css'
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
   let [fetchedData, updateFetchedData] = useState([]);
+  let [gender, updateGender] = useState("");
+  let [species, updateSpecies] = useState("");
   console.log("Data Feteched!");
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
 
@@ -36,6 +38,7 @@ function App() {
         {fetchedData.results?.map((character) => (
           <div key={character.id}>
             <h2>{character.name}</h2>
+            <p>{character.species}</p>
             <img src={character.image} alt={character.name} />
           </div>
         ))}
