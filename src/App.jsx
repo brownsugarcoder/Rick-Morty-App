@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react';
 import React from "react";
 //import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Charactercard from "./components/CharacterCard.jsx";
+//import Charactercard from "./components/CharacterCard.jsx";
 //import Search from "./Components/Search.jsx";
-import Navbar from "./components/Navbar.jsx";
+//import Navbar from "./components/Navbar.jsx";
 //import Home from "./pages/Home.jsx";
 
 
@@ -13,17 +13,33 @@ import './App.css'
 
 
 function App() {
-  let []
-  //let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
+  let [pageNumber, setPageNumber] = useState(1);
+  let [fetchedData, updateFetchedData] = useState([]);
+  console.log("Data Feteched!");
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
+
+   useEffect(() => {
+    (async function () {
+      let data = await fetch(api).then((res) => res.json());
+      console.log(data.results);
+      updateFetchedData(data);
+    })();
+  }, [api]);
 
   return (
-  <>
- 
-      <h1> Rick And Morty</h1>
-        <button>Search</button>
-        <button>Reset</button>
-    </>
-    
+    <div className="App">
+      <h1>Rick And Morty</h1>
+      <button onClick={() => setPageNumber((prev) => prev + 1)}>Next Page</button>
+      <button onClick={() => setPageNumber(1)}>Reset</button>
+      <div>
+        {fetchedData.results?.map((character) => (
+          <div key={character.id}>
+            <h2>{character.name}</h2>
+            <img src={character.image} alt={character.name} />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
