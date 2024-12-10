@@ -1,18 +1,27 @@
-import { useState, useEffect } from 'react';
 import React from "react";
-//import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-//import Charactercard from "./components/CharacterCard.jsx";
-//import Search from "./Components/Search.jsx";
-//import Navbar from "./components/Navbar.jsx";
-//import Home from "./pages/Home.jsx";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from './pages/Home';
 //import Main  from "./assets/style/Main.css"
-
-
 import './assets/style/Main.css'
+import Navbar from "./components/Navbar";
 
 
 function App() {
-  let [pageNumber, setPageNumber] = useState(1);
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
+
+  /* let [pageNumber, setPageNumber] = useState(1);
   let [fetchedData, updateFetchedData] = useState([]);
   let [gender, updateGender] = useState("");
   let [species, updateSpecies] = useState("");
@@ -48,6 +57,7 @@ function App() {
     </div>
   </div>
   );
-}
+} */
+  
 
-export default App;
+
