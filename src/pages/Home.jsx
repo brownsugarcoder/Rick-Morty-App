@@ -6,12 +6,7 @@ export const Home = () => {
      <div className="search">
      <h1>Ricky & Morty</h1>
          <div className="search-bar"> 
-             <input
-              type="text"
-                 placeholder="Enter Character"
-                 value={characterName}
-                 onChange={(e) => setCharacterName(e.target.value)}
-             />
+             
           </div>
 
          <div className="buttons">

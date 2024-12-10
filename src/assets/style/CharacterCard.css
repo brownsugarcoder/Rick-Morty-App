@@ -1,9 +1,15 @@
+.character-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
 .character-card { 
 background-color: #5b6a87;
 width: 500px;
 border-radius: 8px;
  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 450px;
+  height: 250px;
   gap: 20px;
   pointer-events: auto;
   display: flex;
@@ -21,6 +27,31 @@ border-radius: 8px;
     text-decoration: none;
    }
    
-   h2{
+   .button .h2 {
     text-align: center;
    }
+
+   button{
+    background-color: #eaebee;
+    margin-top: 10px;
+    padding: 10px 30px;
+    background-color: #007bff;
+    padding-block: ;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px black;
+    color: white;
+
+   }
+.character-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  width: 300px;
+  text-align: center;
+}
+   
+    
+   
+    
