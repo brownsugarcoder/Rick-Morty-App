@@ -5,11 +5,10 @@ import React from "react";
 //import Search from "./Components/Search.jsx";
 //import Navbar from "./components/Navbar.jsx";
 //import Home from "./pages/Home.jsx";
+//import Main  from "./assets/style/Main.css"
 
 
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './assets/style/Main.css'
 
 
 function App() {
@@ -29,11 +28,14 @@ function App() {
   }, [api]);
 
   return (
-    <div className="App">
+    <div>
+      <div className="Header"> Welcome to Rick And Morty's World</div>
+      <div className="App">
       <h1>Rick And Morty</h1>
       <button onClick={() => setPageNumber((prev) => prev - 1)}>Back</button>
       <button onClick={() => setPageNumber((prev) => prev + 1)}>Next Page</button>
       <button onClick={() => setPageNumber(1)}>Reset</button>
+      
       <div>
         {fetchedData.results?.map((character) => (
           <div key={character.id}>
@@ -44,6 +46,7 @@ function App() {
         ))}
       </div>
     </div>
+  </div>
   );
 }
 

@@ -8,7 +8,6 @@ export const Home = () => {
          <div className="search-bar"> 
              
           </div>
-
          <div className="buttons">
          <button onClick={handleSubmit}>Search</button>
          <button onClick={handleSubmit}>Reset</button>
