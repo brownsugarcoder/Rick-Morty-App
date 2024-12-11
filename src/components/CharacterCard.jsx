@@ -1,21 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/style/CharacterCard.css";
 
 const CharacterCard = ({ results }) => {
-  let display;
-  console.log (results);
-
-  if (results) {
-    display = results.map( ? =>){
-
-    });
-
-  } else {
-    display = "No characters Found :/";
-  }
-
-  return <> {display} </>
-};
+  return (
     <div className="character-container">
       <div className="character-card">
         {children}
