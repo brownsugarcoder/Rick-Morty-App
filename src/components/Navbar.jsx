@@ -12,9 +12,6 @@ const NavBar = () => {
           <Link to="/search">
             Search
           </Link>
-          <Link to="/search">
-          About
-        </Link>
       </nav>
     );
   };
