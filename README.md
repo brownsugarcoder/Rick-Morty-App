@@ -3,7 +3,7 @@ SBA 320H - React Web Application Project
 
 Rick & Morty API
 
-Live Site Link:
+Live Site Link: https://melodic-brioche-5b92fd.netlify.app/
 
 
 
